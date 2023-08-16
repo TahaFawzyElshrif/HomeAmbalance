@@ -5,6 +5,7 @@
 -requirement to run
 -important notes
 -limitations
+-faq
 -resources used
 -contact info
 
@@ -37,5 +38,8 @@ i have tried to make no mistakes in firstaid but uptil now it has not been revis
 [CS50](https://learning.edx.org/course/course-v1:HarvardX+CS50AI+1T2020/home)
 -FirstAid faculty course Dr amany youssef sharaf 
 
+### faq
+-you may find that uses of expert system in firstaid is not actually in important things this is because :i  tried to get requirements from lectures i 
+studied but this i have got only as i'm not specialized in firstaid ,another reason is that some need fuzzy logic not propositional logic as i use
 ### contact info
 tahaelshrif1@gmail.com
