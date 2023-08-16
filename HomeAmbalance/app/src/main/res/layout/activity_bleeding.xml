@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/c"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".burn_input_Activity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="48dp"
+        android:layout_height="46dp"
+        android:background="@android:drawable/ic_menu_revert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".9" />
+
+    <ScrollView
+        android:layout_width="324dp"
+        android:layout_height="628dp"
+        android:layout_marginStart="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rson"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/internal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="اعراض كدمات او نزيف داخلى" />
+
+                <RadioButton
+                    android:id="@+id/melena"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="اسهال دموى" />
+
+                <RadioButton
+                    android:id="@+id/heamatimesis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="قئ دموى" />
+
+                <RadioButton
+                    android:id="@+id/epistaxis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="جرح انف" />
+
+                <RadioButton
+                    android:id="@+id/ear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="جرح اذن" />
+
+                <RadioButton
+                    android:id="@+id/scalp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="جرح راس" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/chocked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="اعراض صدمة مصاحبة" />
+
+                <CheckBox
+                    android:id="@+id/artir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="جرح ف شريان" />
+
+                <CheckBox
+                    android:id="@+id/importpart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="جرح فى عضو حيوى" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="64dp"
+        app:layout_constraintGuide_percent=".1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="50dp"
+        app:layout_constraintGuide_percent=".07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="685dp"
+        app:layout_constraintGuide_percent=".93" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_Fi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="اسعافات لنزيف"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/confirm_brn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:drawable/ic_menu_send" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

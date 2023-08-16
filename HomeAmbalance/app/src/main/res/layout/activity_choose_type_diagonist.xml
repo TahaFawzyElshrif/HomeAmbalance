@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".chooseTypeDiagonist">
+
+    <LinearLayout
+        android:layout_width="241dp"
+        android:layout_height="394dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/Diabete"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:text="مشاكل سكر" />
+
+        <Button
+            android:id="@+id/Burn_Bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="احتراق" />
+
+        <Button
+            android:id="@+id/eplipsy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="نوبات صرع" />
+
+        <Button
+            android:id="@+id/faint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="نوبات اغماء" />
+
+        <Button
+            android:id="@+id/bleeding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="نزيف" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="362dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:text="ما المشكلة؟"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/about"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:background="@android:drawable/ic_dialog_info"
+        android:hint="about"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
