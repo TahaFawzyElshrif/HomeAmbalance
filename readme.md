@@ -31,7 +31,6 @@ android 8
 i have tried to make no mistakes in firstaid but uptil now it has not been revised by medical org
 
 ### limations:
--some screens may not display well (i tried to solve it in xmls but still found)
 -of some inputs may produce unexpected results
 
 ### resources used
