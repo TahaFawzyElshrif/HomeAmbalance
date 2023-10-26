@@ -5,143 +5,127 @@
     android:id="@+id/c"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/grad_back"
+    android:layoutDirection="ltr"
     tools:context=".burn_input_Activity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="48dp"
-        android:layout_height="46dp"
-        android:background="@android:drawable/ic_menu_revert"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/guideline" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LabelLay1">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent=".9" />
-
-    <ScrollView
-        android:layout_width="324dp"
-        android:layout_height="628dp"
-        android:layout_marginStart="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.0">
-
-        <LinearLayout
+        <com.balysv.materialripple.MaterialRippleLayout
+            style="@style/Ripple"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <RadioGroup
-                android:id="@+id/rson"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <RadioButton
-                    android:id="@+id/internal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="اعراض كدمات او نزيف داخلى" />
-
-                <RadioButton
-                    android:id="@+id/melena"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="اسهال دموى" />
-
-                <RadioButton
-                    android:id="@+id/heamatimesis"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="قئ دموى" />
-
-                <RadioButton
-                    android:id="@+id/epistaxis"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="جرح انف" />
-
-                <RadioButton
-                    android:id="@+id/ear"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="جرح اذن" />
-
-                <RadioButton
-                    android:id="@+id/scalp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="جرح راس" />
-            </RadioGroup>
-
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_margin="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/guideline3"
+                app:layout_constraintVertical_bias="0.0">
 
-                <CheckBox
-                    android:id="@+id/chocked"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="اعراض صدمة مصاحبة" />
+                    android:orientation="vertical">
 
-                <CheckBox
-                    android:id="@+id/artir"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="جرح ف شريان" />
+                    <RadioGroup
+                        android:id="@+id/rson"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <CheckBox
-                    android:id="@+id/importpart"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="جرح فى عضو حيوى" />
-            </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/internal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="اعراض كدمات او نزيف داخلى" />
 
-        </LinearLayout>
-    </ScrollView>
+                        <RadioButton
+                            android:id="@+id/melena"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="اسهال دموى" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="64dp"
-        app:layout_constraintGuide_percent=".1"
-        app:layout_constraintTop_toTopOf="parent" />
+                        <RadioButton
+                            android:id="@+id/heamatimesis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="قئ دموى" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="50dp"
-        app:layout_constraintGuide_percent=".07" />
+                        <RadioButton
+                            android:id="@+id/epistaxis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="جرح انف" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="685dp"
-        app:layout_constraintGuide_percent=".93" />
+                        <RadioButton
+                            android:id="@+id/ear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="جرح اذن" />
+
+                        <RadioButton
+                            android:id="@+id/scalp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="جرح راس" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/chocked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="اعراض صدمة مصاحبة" />
+
+                        <CheckBox
+                            android:id="@+id/artir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="جرح ف شريان" />
+
+                        <CheckBox
+                            android:id="@+id/importpart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="جرح فى عضو حيوى" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </androidx.cardview.widget.CardView>
+
 
     <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="2dp"
+        android:id="@+id/LabelLay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintBottom_toTopOf="@id/card1"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -149,15 +133,48 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="15"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="italic"
             android:text="اسعافات لنزيف"
-            android:textSize="24sp" />
+            />
 
-        <Button
-            android:id="@+id/confirm_brn"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:drawable/ic_menu_send" />
     </LinearLayout>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+    <com.balysv.materialripple.MaterialRippleLayout
+            style="@style/Ripple"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/confirm_brn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="معرفة الاسعافات"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

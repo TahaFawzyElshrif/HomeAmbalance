@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/grad_back"
+    android:layoutDirection="ltr"
+
     tools:context=".chooseTypeDiagonist">
 
     <LinearLayout
@@ -50,21 +52,28 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="362dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="15"
         android:text="ما المشكلة؟"
-        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/about"
-        android:layout_width="47dp"
-        android:layout_height="47dp"
-        android:background="@android:drawable/ic_dialog_info"
-        android:hint="about"
+        android:layout_width="52dp"
+        android:layout_height="55dp"
+        android:background="@android:drawable/ic_menu_info_details"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

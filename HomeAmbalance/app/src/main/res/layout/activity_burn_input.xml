@@ -3,189 +3,170 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/c"
+    android:layoutDirection="ltr"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/grad_back"
     tools:context=".burn_input_Activity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="48dp"
-        android:layout_height="46dp"
-        android:background="@android:drawable/ic_menu_revert"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/guideline" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LabelLay2"
+        app:layout_constraintBottom_toTopOf="@+id/card_button2">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent=".9" />
-
-    <ScrollView
-        android:layout_width="324dp"
-        android:layout_height="628dp"
-        android:layout_marginStart="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.0">
-
-        <LinearLayout
+        <com.balysv.materialripple.MaterialRippleLayout
+            style="@style/Ripple"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <RadioGroup
-                android:id="@+id/cause"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="السبب" />
-
-                <RadioButton
-                    android:id="@+id/thermal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="احتراق لسبب تلامس حرارى" />
-
-                <RadioButton
-                    android:id="@+id/chemical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="تلامس مادة كيميائية" />
-
-                <RadioButton
-                    android:id="@+id/electrical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="تلامس كهربى" />
-
-                <RadioButton
-                    android:id="@+id/radiation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="تعرض عالى لاشعة" />
-            </RadioGroup>
-
-            <RadioGroup
-                android:id="@+id/depth"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="مدى العمق" />
-
-                <RadioButton
-                    android:id="@+id/first"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="اثره سطحى" />
-
-                <RadioButton
-                    android:id="@+id/second"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="اثر متوسط" />
-
-                <RadioButton
-                    android:id="@+id/third"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="اثر عميق" />
-
-                <RadioButton
-                    android:id="@+id/largeArea"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="مساحة كبيرة" />
-
-            </RadioGroup>
-
-            <LinearLayout
-                android:id="@+id/risks"
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_margin="8dp"
 
-                <TextView
-                    android:id="@+id/textView5"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="اشياء هامة اخرى" />
+                    android:orientation="vertical">
 
-                <CheckBox
-                    android:id="@+id/large_precent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="نسبة كبيرة من الجسم" />
+                    <RadioGroup
+                        android:id="@+id/cause"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <CheckBox
-                    android:id="@+id/import_part"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="مؤثر على عضو حيوى" />
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="السبب" />
 
-                <CheckBox
-                    android:id="@+id/sychological"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="مصاحب لاعراض نفسية اخرى" />
+                        <RadioButton
+                            android:id="@+id/thermal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="احتراق لسبب تلامس حرارى" />
 
-                <CheckBox
-                    android:id="@+id/poisioned"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="مادة قد تكون سامة" />
-            </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/chemical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="تلامس مادة كيميائية" />
 
-        </LinearLayout>
-    </ScrollView>
+                        <RadioButton
+                            android:id="@+id/electrical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="تلامس كهربى" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="64dp"
-        app:layout_constraintGuide_percent=".1"
-        app:layout_constraintTop_toTopOf="parent" />
+                        <RadioButton
+                            android:id="@+id/radiation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="تعرض عالى لاشعة" />
+                    </RadioGroup>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="50dp"
-        app:layout_constraintGuide_percent=".07" />
+                    <RadioGroup
+                        android:id="@+id/depth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="685dp"
-        app:layout_constraintGuide_percent=".93" />
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="مدى العمق" />
+
+                        <RadioButton
+                            android:id="@+id/first"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="اثره سطحى" />
+
+                        <RadioButton
+                            android:id="@+id/second"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="اثر متوسط" />
+
+                        <RadioButton
+                            android:id="@+id/third"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="اثر عميق" />
+
+                        <RadioButton
+                            android:id="@+id/largeArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="مساحة كبيرة" />
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/risks"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="اشياء هامة اخرى" />
+
+                        <CheckBox
+                            android:id="@+id/large_precent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="نسبة كبيرة من الجسم" />
+
+                        <CheckBox
+                            android:id="@+id/import_part"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="مؤثر على عضو حيوى" />
+
+                        <CheckBox
+                            android:id="@+id/sychological"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="مصاحب لاعراض نفسية اخرى" />
+
+                        <CheckBox
+                            android:id="@+id/poisioned"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="مادة قد تكون سامة" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </androidx.cardview.widget.CardView>
+
 
     <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="2dp"
+        android:id="@+id/LabelLay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintBottom_toTopOf="@id/card2"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -193,15 +174,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="15"
             android:text="اسعافات احتراقات"
-            android:textSize="24sp" />
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="italic" />
 
-        <Button
-            android:id="@+id/confirm_brn"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:drawable/ic_menu_send" />
+
     </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card2"
+        app:layout_constraintBottom_toBottomOf="parent">
 
+    <com.balysv.materialripple.MaterialRippleLayout
+        style="@style/Ripple"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/confirm_brn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="معرفة الاسعافات"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+    </com.balysv.materialripple.MaterialRippleLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
